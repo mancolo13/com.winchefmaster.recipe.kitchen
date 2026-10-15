@@ -16,10 +16,10 @@ class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = const [
-    Tab1Screen(),
     Tab2Screen(),
-    Tab3Screen(),
     Tab4Screen(),
+    Tab1Screen(),
+    Tab3Screen(),
   ];
 
   @override
@@ -33,26 +33,25 @@ class _MainScreenState extends State<MainScreen> {
         indicatorColor: AppTheme.primaryColor.withValues(alpha: 0.2),
         destinations: [
         NavigationDestination(
-          icon: const Icon(Icons.restaurant_menu_outlined),
-          selectedIcon: const Icon(Icons.restaurant_menu, color: AppTheme.primaryColor),
-          label: 'Recipes',
-        ),
-        NavigationDestination(
-          icon: const Icon(Icons.kitchen_outlined),
-          selectedIcon: const Icon(Icons.kitchen, color: AppTheme.primaryColor),
-          label: 'Pantry',
-        ),
-        NavigationDestination(
           icon: const Icon(Icons.shopping_cart_outlined),
           selectedIcon: const Icon(Icons.shopping_cart, color: AppTheme.primaryColor),
           label: 'Grocery',
+        ),
+        NavigationDestination(
+          icon: const Icon(Icons.restaurant_menu_outlined),
+          selectedIcon: const Icon(Icons.restaurant_menu, color: AppTheme.primaryColor),
+          label: 'Recipes',
         ),
         NavigationDestination(
           icon: const Icon(Icons.bookmark_border_outlined),
           selectedIcon: const Icon(Icons.bookmark, color: AppTheme.primaryColor),
           label: 'Favorites',
         ),
-
+        NavigationDestination(
+          icon: const Icon(Icons.kitchen_outlined),
+          selectedIcon: const Icon(Icons.kitchen, color: AppTheme.primaryColor),
+          label: 'Pantry',
+        ),
         ],
       ),
     );
